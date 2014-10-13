@@ -25,8 +25,11 @@ In the HTML file, the total number result info is warpped in a div with class of
 How to get all the results?
 Firstly I created a class Result containing title and price to present an item.
 Each of the item is wrapped in a div containing attribute "data-item-id". When we reached the item, the title is under class "js-product-title" and price is under class "tile-row". So a Result object is created for each item found, and it is added into an ArrayList object.
+In no results are found, the output will be empty.
 
 Note:
-1. I tested on several examples, one thing happened once was that the content had been read before the prices are fully loaded. This was probably because the webpage's content is dynamically loaded based on the query url. Try to run the query again can solve this problem.
+1. I tested on several examples, one thing happened once was that the content had been read before the prices are fully loaded(all the prices are showing loading price). This was probably because the webpage's content is dynamically loaded based on the query url. Try to run the query again can mostly solve this problem.
+
 2. The program doesn't support redirecting after the query address. For example, if search "computer", walmart will redirect the page to a landing page for computer. The landing page's structure is totally different than normal query we need to deal with.
+
 3. Since there are different types of prices listed in the items such as normal price, list price(final price can only be shown at check out), out of stock(no price shown), out of stock online(price still shown, but the item cannot be bought)... So I decided to print the price as well as special status. This can give full information to the query.
