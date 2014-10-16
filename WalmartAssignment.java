@@ -103,6 +103,8 @@ public class WalmartAssignment {
 	public static ArrayList<Result> getResults(Document doc){
 		ArrayList<Result> res = new ArrayList<Result>();
 		Element tileContainer = doc.getElementById("tile-container");
+		if(tileContainer==null)
+			return res;
 		for(Element e: tileContainer.children()){
 			if(e.hasAttr("data-item-id")){
 				String title = "";
