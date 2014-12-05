@@ -11,7 +11,8 @@ So I read the input arguments to fill the query address.
 
 Determine query type?
 Two kinds of queries need to be supported.
-This was checked by how many arguments are input. If one argument is input, then the query is asking the number of results. If two arguments are input, then the query is asking for listing all the results.
+This was checked by how many arguments are input. If one argument is input, then the query is asking the number of results. 
+If two arguments are input, then the query is asking for listing all the results.
 
 How to load the HTML?
 I used URL class to load the HTML.
